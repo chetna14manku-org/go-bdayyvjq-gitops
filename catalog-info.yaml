@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: go-bdayyvjq-gitops
+  description: This is GitOps manifest for go-bdayyvjq   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=go-bdayyvjq
+    backstage.io/kubernetes-id: go-bdayyvjq 
+    backstage.io/techdocs-ref: dir:.
+    dev.azure.com/project-repo: chetna14manku-org/go-bdayyvjq-gitops
+    dev.azure.com/project: shared-public
+    dev.azure.com/build-definition: chetna14manku-org.go-bdayyvjq-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:go-bdayyvjq
